@@ -42,7 +42,7 @@ module HealthMonitor
       message: '',
       status: STATUSES[:ok]
     }
-  rescue StandardError => e
+  rescue StandardError, Mysql2::Error => e
     configuration.error_callback.call(e) if configuration.error_callback
 
     {
