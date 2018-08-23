@@ -2,8 +2,8 @@ require 'health_monitor/configuration'
 
 module HealthMonitor
   STATUSES = {
-    ok: 'OK',
-    error: 'ERROR'
+    ok: 'HEALTHY',
+    error: 'UNHEALTHY'
   }.freeze
 
   extend self
